@@ -1,0 +1,62 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - blog how
+  - blog why
+  - blog comment
+  - blog money
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_blog_add:
+  - text: "Here are few techniques to learn how to write blog..."
+  - text: "Yes you can write blog on beautiful blogs website"
+  - text: "Here you can write your blogs in a simple way"
+
+  utter_blog_add_comment:
+    - text: "Here are few techniques to learn how to write blog comments..."
+    - text: "Yes you will write the blog comments"
+    - text: "Keep writing comments every day"
+
+  utter_blog_add_unhappy:
+    - text: "Don't worry i will help you to write a blog"
+    - text: "Yes you will write the blog"
+    - text: "Keep writing every day"
+
+  utter_blog_add_why:
+    - text: "Don't worry i will help you to write a blog as it helps making money"
+    - text: "Yes you will write the blog to gain knowledge and distribute knowledge"
+    - text: "Keep writing every day , all the best"
+
+  utter_blog_money:
+    - text: "You can make your money via beautiful blogs"
+    - text: "You can make your money via beautiful blogs if its free"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

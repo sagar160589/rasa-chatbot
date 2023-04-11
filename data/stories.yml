@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: blog writing happy path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: blog how
+    - action: utter_blog_add
+    - intent: blog why
+    - action: utter_blog_add_why
+    - intent: affirm
+    - action: utter_happy
+
+- story: blog writing sad path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: blog why
+    - action: utter_blog_add_unhappy
+    - intent: affirm
+    - action: utter_happy
+
+- story: blog writing comments
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: blog comment
+    - action: utter_blog_add_comment
+    - intent: affirm
+    - action: utter_happy
+
+- story: blog money path
+  steps:
+    - intent: blog money
+    - action: utter_blog_money
