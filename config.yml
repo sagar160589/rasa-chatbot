@@ -1,7 +1,7 @@
 recipe: default.v1
 assistant_id: 20230405-170530-obsolete-beta
 language: en
-pipeline: null
+pipeline:
     - name: "DIETClassifier"
       epochs: 100
       batch_size: 64
